@@ -48,8 +48,16 @@
             </li>
           {% endif %}
           #}
-          {# MADD making file-load button to toolbar #}
           {% if current_user.is_authenticated %}
+            <li>
+              <a href="{{ url_for('sitemind.index') }}">
+                <span class="label label-primary">Classify</span>
+              </a>
+            </li>
+          {% endif %}
+
+          {# MADD making file-load button to toolbar #}
+          {% if current_user.role == 'admin' %}
           <li>
             <a href="{{ url_for('datahandling.loaddata') }}"></a>
               <span class="label label-primary">Upload data</span>
@@ -89,7 +97,9 @@
 {% endblock %}
 
 {% block footer %}
+<!--
   <li><a href="{{ url_for('contact.index') }}">Contact</a></li>
   <li><a href="{{ url_for('page.privacy') }}">Privacy Policy</a></li>
   <li><a href="{{ url_for('page.terms') }}">Terms of Service</a></li>
+-->
 {% endblock %}

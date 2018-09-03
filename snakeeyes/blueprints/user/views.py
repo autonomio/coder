@@ -120,7 +120,7 @@ def signup():
         u.save()
 
         if login_user(u):
-            flash('Awesome, thanks for signing up!', 'success')
+            flash('Thank you for signing up!', 'success')
             return redirect(url_for('user.welcome'))
 
     return render_template('user/signup.html', form=form)
@@ -139,7 +139,7 @@ def welcome():
         current_user.username = request.form.get('username')
         current_user.save()
 
-        flash('Sign up is complete, enjoy our services.', 'success')
+        flash('Sign up is complete, welcome.', 'success')
         return redirect(url_for('user.settings'))
 
     return render_template('user/welcome.html', form=form)
