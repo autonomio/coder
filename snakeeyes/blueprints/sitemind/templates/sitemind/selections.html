@@ -1,0 +1,78 @@
+{% extends 'layouts/app.html' %}
+{% import 'macros/form.html' as f with context %}
+
+
+{% block header %}
+{{ super() }}
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<style>
+  .slow .toggle-group { transition: left 0.7s; -webkit-transition: left 0.7s; }
+  .fast .toggle-group { transition: left 0.1s; -webkit-transition: left 0.1s; }
+  .quick .toggle-group { transition: none; -webkit-transition: none; }
+</style>
+{% endblock %}
+
+
+{% block title %}Testing to bring Sitemind UI into being{% endblock %}
+{% block body %}
+
+
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2 well">
+      
+      <legend>
+      <br>
+      {{ title }}
+    </legend>
+    <br>
+      {{ text | truncate(1500) }}
+    
+      {% call f.form_tag('sitemind.index') %}
+
+      <br>
+<div class="checkbox">
+  <label>
+    <input data-toggle="toggle" data-style="quick" data-on="  LEFT  " data-off="  LEFT  " data-onstyle="success" type="checkbox" name="checkbox1">
+    "   "
+    <input data-toggle="toggle" data-style="quick" data-on="  RIGHT " data-off="  RIGHT  " data-onstyle="success" type="checkbox" name="checkbox2">
+    "   "
+    <input data-toggle="toggle" data-style="quick" data-on="NEGATIVE" data-off="NEGATIVE" data-onstyle="success" type="checkbox" name="checkbox3">
+    "   "
+    <input data-toggle="toggle" data-style="quick" data-on="POSITIVE" data-off="POSITIVE" data-onstyle="success" type="checkbox" name="checkbox4">
+    "   "
+    <input data-toggle="toggle" data-style="quick" data-on="FUNCTIONAL" data-off="FUNCTIONAL" data-onstyle="success" type="checkbox" name="checkbox5">
+<!--
+        {% call f.form_group(form.checkbox3,
+                             placeholder='POSITIVE') %}
+        {% endcall %}
+
+        {% call f.form_group(form.checkbox4,
+                             placeholder='NEGATIVE') %}
+        {% endcall %}
+
+
+        {% call f.form_group(form.checkbox5,
+                             placeholder='FUNCTIONAL') %}
+        {% endcall %}
+
+        
+
+        {% call f.form_group(form.message, css_class='margin-bottom',
+                             placeholder='You can write any notes about the sample here',
+                             rows='2') %}
+        {% endcall %}
+
+        -->
+        <button type="submit" class="btn btn-primary">Save</button>
+      {% endcall %}
+    </label>
+  </div>
+  <br>
+      </div>
+  </div>
+{% endblock %}
+
+
+

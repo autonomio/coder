@@ -1,0 +1,247 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 10px;
+  border-top: 1px solid #e9e9e9;
+
+  height: 60px;
+}
+
+/* Margin and padding
+-------------------------------------------------- */
+.lg-margin-bottom {
+  margin-bottom: 60px;
+}
+
+.md-margin-bottom {
+  margin-bottom: 40px;
+}
+
+.lg-margin-top {
+  margin-top: 60px;
+}
+
+.md-margin-top {
+  margin-top: 40px;
+}
+
+.sm-margin-top {
+  margin-top: 20px;
+}
+
+/* Helpers
+-------------------------------------------------- */
+
+.small {
+  font-size: 12px;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.spinner {
+  display: none;
+}
+
+.scale-up {
+  transform: scale(1.05);
+}
+
+.quarter-faded {
+  opacity: 0.75;
+}
+
+.half-faded {
+  opacity: 0.5;
+}
+
+.relative {
+  position: relative;
+}
+
+/* Bootstrap overrides
+-------------------------------------------------- */
+label {
+  font-weight: 400;
+}
+
+.checkbox input[type='checkbox'], .checkbox-inline input[type='checkbox'] {
+  margin-left: 0;
+}
+
+/* OLD checkbox css ******
+
+ANOTHER ATTEMPT:
+
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:30px;
+    height:30px;
+    background:white;
+    border-radius:5px;
+    border:2px solid #555;
+}
+input[type='checkbox']:checked {
+    background: #abd;
+}
+
+*/
+
+/*
+.double {
+  zoom: 2;
+  transform: scale(2);
+  -ms-transform: scale(2);
+  -webkit-transform: scale(2);
+  -o-transform: scale(2);
+  -moz-transform: scale(2);
+  transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+}
+
+
+input[type="checkbox"] {
+  width: 2.2em;
+  height: 2.2em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  border: 1px solid #777;
+  border-radius: 3px;
+  vertical-align: middle;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='512px' height='512px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve'%3e%3cpath d='M448,71.9c-17.3-13.4-41.5-9.3-54.1,9.1L214,344.2l-99.1-107.3c-14.6-16.6-39.1-17.4-54.7-1.8 c-15.6,15.5-16.4,41.6-1.7,58.1c0,0,120.4,133.6,137.7,147c17.3,13.4,41.5,9.3,54.1-9.1l206.3-301.7 C469.2,110.9,465.3,85.2,448,71.9z'/%3e%3c/svg%3e");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-color:#eee;
+  background-position:-10em -10em;
+  transition:.3s  ease;
+}
+*/
+
+.alert-small {
+  padding: 5px;
+  margin-bottom: 0;
+}
+
+.alert-error, .alert-message {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.alert-error hr, .alert-message hr {
+  border-top-color: #e4b9c0;
+}
+
+.alert-error .alert-link, .alert-message .alert-link {
+  color: #843534;
+}
+
+.col-header {
+  height: 26px;
+}
+
+dd {
+  margin-bottom: 8px;
+}
+
+/* Admin dashboard
+-------------------------------------------------- */
+#bulk_actions {
+  display: none;
+  padding-bottom: 8px;
+}
+
+#scope {
+  margin-bottom: 0;
+  width: 160px;
+  height: 29px;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.sort:after {
+  content: '\f0dc';
+  font-family: FontAwesome;
+  margin-left: 6px;
+  color: #BBB;
+}
+
+.asc:after {
+  content: '\f0dd';
+  font-family: FontAwesome;
+  margin-left: 6px;
+  color: #444;
+}
+
+.desc:after {
+  content: '\f0de';
+  font-family: FontAwesome;
+  margin-left: 6px;
+  color: #444;
+}
+
+#duration-in-months {
+  display: none;
+}
+
+.rd-date table td {
+  padding: 5px;
+}
+
+/* Billing
+-------------------------------------------------- */
+#coupon_code_status {
+  display: none;
+}
+
+.coupon-code {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px dashed #e1e1e1;
+}
+
+.coupon-code input {
+  margin-bottom: 5px;
+}
+
+.payment-errors {
+  display: none;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.cc-details {
+  width: 75px;
+}
+
+a.pricing--primary {
+  color: #fff;
+}
+
+/* Bet
+-------------------------------------------------- */
+#dice {
+  font-size: 100px;
+}
