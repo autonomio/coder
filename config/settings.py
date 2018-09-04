@@ -3,11 +3,11 @@ from datetime import timedelta
 from celery.schedules import crontab
 
 
-DEBUG = True
+DEBUG = False
 LOG_LEVEL = 'DEBUG'  # CRITICAL / ERROR / WARNING / INFO / DEBUG
 DEBUG_TB_INTERCEPT_REDIRECTS = False #MADD 
 
-SERVER_NAME = 'localhost:8000'
+SERVER_NAME = 'multistoryism.com:8000'
 SECRET_KEY = 'insecurekeyfordev'
 
 # Flask-Mail.
