@@ -371,6 +371,25 @@ var bets = function () {
   });
 };
 
+
+
+/* VARTIAINEN 2018-10-02 */
+function showAllArticleText(){
+  var selector = '.well .articleTextWrapper.truncated'
+    , element = document.querySelector( selector )
+    , className
+  ;
+  if( !element ){
+    return;
+  };
+  className = element.className;
+  className = className.replace( /(\s|^)truncated(?=\s|$)/, ' ' );
+  element.className = className;
+};
+/* /VARTIAINEN */
+
+
+
 // Initialize everything when the browser is ready.
 $(document).ready(function() {
   momentjsClasses();

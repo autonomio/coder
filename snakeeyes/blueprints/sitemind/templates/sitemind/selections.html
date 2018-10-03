@@ -27,7 +27,10 @@
       {{ title }}
     </legend>
     <br>
-      {{ text | truncate(1500) }}
+      <div class="articleTextWrapper truncated">
+        <div class="articleTextWrapperInner">{{ text }}</div>
+        <button onclick="showAllArticleText()" class="btn btn-primary showAll">Show All</button>
+      </div>
     
       {% call f.form_tag('sitemind.index') %}
 

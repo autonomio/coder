@@ -10,7 +10,42 @@ body {
   padding-bottom: 20px;
 
   margin-bottom: 60px;
+
+
+
+  /* VARTIAINEN 2018-10-02 */
+  background-color: #1a1818;
+  filter:
+    invert(100%)
+    /*hue-rotate(180deg)*/
+  ;
+  /* /VARTIAINEN */
+
+
 }
+
+
+/* VARTIAINEN 2018-10-02 */
+legend,
+.well {
+  color: #000;
+}
+.well {
+  background-color: #ddd;
+}
+.well .articleTextWrapper.truncated .articleTextWrapperInner {
+  max-height: 160px;
+  overflow: hidden;
+}
+.well .articleTextWrapper:not(.truncated) button.showAll {
+  display: none;
+}
+.well .articleTextWrapper.truncated > span {
+  text-overflow: ellipsis;
+}
+/* /VARTIAINEN */
+
+
 
 .footer {
   position: absolute;
