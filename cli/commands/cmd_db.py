@@ -2,9 +2,9 @@ import click
 
 from sqlalchemy_utils import database_exists, create_database
 
-from snakeeyes.app import create_app
-from snakeeyes.extensions import db
-from snakeeyes.blueprints.user.models import User
+from coder.app import create_app
+from coder.extensions import db
+from coder.blueprints.user.models import User
 
 from sqlalchemy.schema import DropTable
 from sqlalchemy.ext.compiler import compiles

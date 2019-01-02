@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='SnakeEyes-CLI',
+    name='coder-CLI',
     version='1.0',
     packages=['cli', 'cli.commands'],
     include_package_data=True,
@@ -10,6 +10,6 @@ setup(
     ],
     entry_points="""
         [console_scripts]
-        snakeeyes=cli.cli:cli
+        coder=cli.cli:cli
     """,
 )

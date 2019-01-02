@@ -1,0 +1,22 @@
+{% extends 'layouts/app.html' %}
+
+{% block title %}Data exporting{% endblock %}
+
+{% block body %}
+
+<bold>Loading this page saves classifications to file exported-data.csv
+
+  <hr/>
+  <a href="{{ url_for('sitemind.index') }}" class="btn btn-primary">
+    Go back to classification
+  </a>
+
+  <div>
+    {% for row in data_table %}
+    <tr>
+      <td>{{row}}</td>
+    </tr>
+    {% endfor %}
+  </div>
+
+{% endblock %}

@@ -4,7 +4,7 @@ import subprocess
 import click
 
 
-APP_NAME = 'snakeeyes'
+APP_NAME = 'coder'
 BABEL_I18N_PATH = os.path.join(APP_NAME, 'translations')
 MESSAGES_PATH = os.path.join(APP_NAME, 'translations', 'messages.pot')
 

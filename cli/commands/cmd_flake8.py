@@ -6,7 +6,7 @@ import click
 @click.command()
 @click.option('--skip-init/--no-skip-init', default=True,
               help='Skip __init__.py files?')
-@click.argument('path', default='snakeeyes')
+@click.argument('path', default='coder')
 def cli(skip_init, path):
     """
     Run flake8 to analyze your code base.

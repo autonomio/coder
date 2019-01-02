@@ -1,8 +1,8 @@
 import click
 
-from snakeeyes.app import create_app
-from snakeeyes.extensions import db
-from snakeeyes.blueprints.billing.gateways.stripecom import Plan as PaymentPlan
+from coder.app import create_app
+from coder.extensions import db
+from coder.blueprints.billing.gateways.stripecom import Plan as PaymentPlan
 
 # Create an app context for the database connection.
 app = create_app()

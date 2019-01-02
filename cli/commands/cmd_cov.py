@@ -4,7 +4,7 @@ import click
 
 
 @click.command()
-@click.argument('path', default='snakeeyes')
+@click.argument('path', default='coder')
 def cli(path):
     """
     Run a test coverage report.

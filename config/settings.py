@@ -7,7 +7,7 @@ DEBUG = False
 LOG_LEVEL = 'DEBUG'  # CRITICAL / ERROR / WARNING / INFO / DEBUG
 DEBUG_TB_INTERCEPT_REDIRECTS = False #MADD 
 
-SERVER_NAME = 'multistoryism.com:8000'
+SERVER_NAME = 'localhost:8000'
 SECRET_KEY = 'insecurekeyfordev'
 
 # Flask-Mail.
@@ -36,17 +36,17 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_REDIS_MAX_CONNECTIONS = 5
 CELERYBEAT_SCHEDULE = {
     'mark-soon-to-expire-credit-cards': {
-        'task': 'snakeeyes.blueprints.billing.tasks.mark_old_credit_cards',
+        'task': 'coder.blueprints.billing.tasks.mark_old_credit_cards',
         'schedule': crontab(hour=0, minute=0)
     },
     'expire-old-coupons': {
-        'task': 'snakeeyes.blueprints.billing.tasks.expire_old_coupons',
+        'task': 'coder.blueprints.billing.tasks.expire_old_coupons',
         'schedule': crontab(hour=0, minute=1)
     },
 }
 
 # SQLAlchemy.
-db_uri = 'postgresql://snakeeyes:devpassword@postgres:5432/snakeeyes'
+db_uri = 'postgresql://coder:devpassword@postgres:5432/coder'
 SQLALCHEMY_DATABASE_URI = db_uri
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
@@ -69,7 +69,7 @@ STRIPE_PLANS = {
         'interval': 'month',
         'interval_count': 1,
         'trial_period_days': 14,
-        'statement_descriptor': 'SNAKEEYES BRONZE',
+        'statement_descriptor': 'coder BRONZE',
         'metadata': {
             'coins': 110
         }
@@ -82,7 +82,7 @@ STRIPE_PLANS = {
         'interval': 'month',
         'interval_count': 1,
         'trial_period_days': 14,
-        'statement_descriptor': 'SNAKEEYES GOLD',
+        'statement_descriptor': 'coder GOLD',
         'metadata': {
             'coins': 600,
             'recommended': True
@@ -96,7 +96,7 @@ STRIPE_PLANS = {
         'interval': 'month',
         'interval_count': 1,
         'trial_period_days': 14,
-        'statement_descriptor': 'SNAKEEYES PLATINUM',
+        'statement_descriptor': 'coder PLATINUM',
         'metadata': {
             'coins': 1500
         }
@@ -110,20 +110,6 @@ COIN_BUNDLES = [
     {'coins': 10000, 'price_in_cents': 7000, 'label': '10,000 for $70'},
 ]
 
-# Bet.
-DICE_ROLL_PAYOUT = {
-    '2': 36.0,
-    '3': 18.0,
-    '4': 12.0,
-    '5': 9.0,
-    '6': 7.2,
-    '7': 6.0,
-    '8': 7.2,
-    '9': 9.0,
-    '10': 12.0,
-    '11': 18.0,
-    '12': 36.0
-}
 
 RATELIMIT_STORAGE_URL = CELERY_BROKER_URL
 RATELIMIT_STRATEGY = 'fixed-window-elastic-expiry'

@@ -21,21 +21,21 @@ services:
   website:
     build: .
     command: >
-      gunicorn -c "python:config.gunicorn" --reload "snakeeyes.app:create_app()"
+      gunicorn -c "python:config.gunicorn" --reload "coder.app:create_app()"
     env_file:
       - '.env'
     volumes:
-      - '.:/snakeeyes'
+      - '.:/coder'
     ports:
       - '8000:8000'
 
   celery:
     build: .
-    command: celery worker -B -l info -A snakeeyes.blueprints.contact.tasks
+    command: celery worker -B -l info -A coder.blueprints.contact.tasks
     env_file:
       - '.env'
     volumes:
-      - '.:/snakeeyes'
+      - '.:/coder'
 
 volumes:
   postgres:
